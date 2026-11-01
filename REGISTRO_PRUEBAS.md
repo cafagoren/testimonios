@@ -21,6 +21,18 @@
 | P09 — Presentación | Se revisó en escritorio y en 800 × 400; también se probó la navegación por teclado. | Aprobada |
 | P10 — Compilación | `npm run build` terminó sin errores. | Aprobada |
 
+## Pruebas de reproducción automática
+
+| Prueba | Resultado obtenido | Estado |
+|---|---|---|
+| A01 — Activación | Al pulsar Reanudar, el testimonio avanzó aproximadamente cada cinco segundos. | Aprobada |
+| A02 — Pausa | Al pulsar Pausar, el testimonio permaneció igual durante más de cinco segundos. | Aprobada |
+| A03 — Acción manual | Al pulsar Siguiente durante la reproducción, cambió el testimonio y la reproducción quedó pausada. | Aprobada |
+| A04 — Reanudación | Reanudar volvió a activar el avance sin aceleración observada. | Aprobada |
+| A05 — Límites | La reproducción pasó del testimonio 8 al 1. | Aprobada |
+| A06 — Pocos datos | Con un registro no apareció Reanudar; con cero apareció el mensaje sin controles. | Aprobada |
+| A07 — Limpieza | El efecto contiene clearInterval y no se observó aceleración al pausar y reanudar. | Aprobada |
+
 ## Evidencias pendientes
 - Capturas de P01–P10.
 - Revisión del README.
