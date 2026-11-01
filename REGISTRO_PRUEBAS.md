@@ -39,6 +39,7 @@ La siguiente tabla describe el comportamiento esperado con Ana, Luis y María. E
 | Anterior desde Ana | 0 | 2 | 3 de 3 |
 
 Se comprobaron P01–P04 con los tres registros y coincidieron con los resultados esperados. En P05 se pulsó Aleatorio diez veces y en cada ocasión cambió a otro testimonio.
+La función `random` elige un salto entre 1 y `total - 1`. Después suma ese salto al índice actual y usa `% total` para mantenerse dentro de la lista. Como el salto nunca es cero ni igual al total, el resultado es distinto del índice actual cuando hay dos o más testimonios. Con menos de dos, la función termina sin cambiarlo.
 
 ## Pruebas de reproducción automática
 
@@ -46,7 +47,7 @@ Se comprobaron P01–P04 con los tres registros y coincidieron con los resultado
 |---|---|---|
 | A01 — Activación | Al pulsar Reanudar, el testimonio avanzó aproximadamente cada cinco segundos. | Aprobada |
 | A02 — Pausa | Al pulsar Pausar, el testimonio permaneció igual durante más de cinco segundos. | Aprobada |
-| A03 — Acción manual | Al pulsar Siguiente durante la reproducción, cambió el testimonio y la reproducción quedó pausada. | Aprobada |
+| A03 — Acción manual | Al pulsar Anterior, Siguiente o Aleatorio durante la reproducción, cambió el testimonio y la reproducción quedó pausada. | Aprobada |
 | A04 — Reanudación | Reanudar volvió a activar el avance sin aceleración observada. | Aprobada |
 | A05 — Límites | La reproducción pasó del testimonio 8 al 1. | Aprobada |
 | A06 — Pocos datos | Con un registro no apareció Reanudar; con cero apareció el mensaje sin controles. | Aprobada |

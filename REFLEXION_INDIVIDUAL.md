@@ -48,3 +48,17 @@ Una pregunta que todavía puedo profundizar es: **¿cómo debería ajustarse el 
 Realicé la práctica de manera individual: preparé el entorno, organicé los datos, construí los componentes, implementé la navegación y la reproducción automática, y ejecuté las pruebas registradas.
 
 Al trabajar solo, no hubo cambio de roles entre conductor y observador. La revisión por otra pareja queda pendiente, ya que requiere la participación de otras personas.
+
+## Preguntas sobre reproducción automática
+
+**¿Por qué se usa un efecto para el temporizador y un evento para el clic?**  
+El clic ocurre como respuesta directa a una acción del usuario. El temporizador funciona durante un periodo de tiempo, por lo que `useEffect` permite crearlo y limpiarlo según el estado de reproducción.
+
+**¿Qué problema evita `clearInterval`?**  
+Elimina el intervalo cuando deja de ser necesario y evita que se acumulen temporizadores que hagan avanzar los testimonios demasiado rápido.
+
+**¿Por qué no existe un Hook llamado `render`?**  
+Renderizar es el proceso en el que React calcula la interfaz a partir del estado y las props. No es una función que este componente deba llamar como Hook.
+
+**¿Qué pasaría si los datos llegaran de una API y cambiaran?**  
+Habría que actualizar la lista y comprobar que el índice siga siendo válido cuando cambie su tamaño. También habría que considerar los estados de carga y error.
